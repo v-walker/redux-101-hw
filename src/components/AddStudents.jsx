@@ -7,7 +7,10 @@ const AddStudents = () => {
     // show the current student count
   return (
     <>
-      Add Students
+      Add Students 
+      <br />
+
+      <button>Add Students</button>
     </>
   )
 }

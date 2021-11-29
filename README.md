@@ -24,9 +24,15 @@ In the src folder, create a `actions` and `reducers` folder
 - Write logic to show the count from the global state. This value should initially be zero.
 
 
-## Add Students 
+## Add Students
+
+- import the data from data/students.js 
+- add this data to the global students state 
+- write logic to keep track of how many students are in the student array
 
 ## Add New Student 
+
+- create a form in `AddNewStudent.jsx` to add a new student to the new students array in global state.
 
 ## Delete Student By ID 
 
