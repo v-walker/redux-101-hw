@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createStore} from "redux";
+import {Provider} from "react-redux";
+import reducer from './reducers/reducer';
 import './index.css';
 import App from './App';
 import AddItemInOrder from './components/AddItemInOrder'
@@ -16,7 +19,11 @@ import UpdateStudent from './components/UpdateStudent'
 import BaseLayout from './components/layout/BaseLayout';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+const store = createStore(reducer, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
 ReactDOM.render(
+  <Provider store={store}>
   <React.StrictMode>
   <Router>
       <BaseLayout>
@@ -35,7 +42,8 @@ ReactDOM.render(
         </Routes>
       </BaseLayout>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
