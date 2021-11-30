@@ -20,4 +20,12 @@ const addStudent = (id, fName, city) => {
     }
 }
 
-export { addStudents, addStudent }
+const deleteByID = (id) => {
+
+    return {
+        type: "DELETE_BY_ID",
+        id
+    }
+}
+
+export { addStudents, addStudent, deleteByID }

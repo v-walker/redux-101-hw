@@ -1,5 +1,3 @@
-import students from "../data/students";
-
 const reducer = (state, action) => {
     
     if (state === undefined) {
@@ -21,6 +19,13 @@ const reducer = (state, action) => {
                 ...state,
                 students: state.students.concat(action.data),
                 count: state.students.length + 1
+            }
+        case "DELETE_BY_ID": 
+            return {
+                ...state,
+                students: state.students.filter(student => {
+                    return student.id !== action.id
+                })
             }
         default: 
             return state;
