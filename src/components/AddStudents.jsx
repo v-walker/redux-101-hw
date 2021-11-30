@@ -16,4 +16,4 @@ const AddStudents = () => {
   )
 }
 
-export default AddStudents
+export default AddStudents;

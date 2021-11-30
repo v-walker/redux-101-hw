@@ -27,6 +27,13 @@ const reducer = (state, action) => {
                     return student.id !== action.id
                 })
             }
+        case "DELETE_BY_NAME":
+            return {
+                ...state,
+                students: state.students.filter(student => {
+                    return student.fName !== action.fName
+                })
+            }
         default: 
             return state;
     }
