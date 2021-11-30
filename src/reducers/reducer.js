@@ -3,7 +3,10 @@ const reducer = (state, action) => {
     if (state === undefined) {
         state = {
             students: [],
-            count: 0
+            count: 0,
+            clickedAddStudents: false,
+            searchResult: {},
+            searchHistory: []
         }
     }
 
@@ -12,7 +15,8 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 students: state.students.concat(action.data),
-                count: state.count + action.data.length
+                count: state.count + action.data.length,
+                clickedAddStudents: action.add
             }
         case "ADD_STUDENT":
             return {
@@ -29,13 +33,18 @@ const reducer = (state, action) => {
                 count: state.count - 1
             }
         case "DELETE_BY_NAME":
-            return {
-                ...state,
-                students: state.students.filter(student => {
-                    return student.fName !== action.fName
-                }),
-                count: state.count - 1
+            if (state.students.filter(student => student.fName === action.fName)) {
+                return {
+                    ...state,
+                    students: state.students.filter(student => {
+                        return student.fName !== action.fName
+                    }),
+                    count: state.count - 1
+                }
+            } else {
+                return alert("Name not found")
             }
+            
         case "SORT_STUDENTS_ALPHA":
             const compare = (a, b) => {
                 if ( a.fName < b.fName ){

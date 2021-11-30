@@ -4,7 +4,8 @@ const addStudents = () => {
 
     return {
         type: "ADD_STUDENTS",
-        data: students
+        data: students,
+        add: true
     }
 }
 
@@ -50,7 +51,7 @@ const sortStudentsCity = () => {
     }
 }
 
-const AddStudentInOrder = (id, fName, city) => {
+const addStudentInOrder = (id, fName, city) => {
 
     return {
         type: "ADD_STUDENT_IN_ORDER",
@@ -62,4 +63,4 @@ const AddStudentInOrder = (id, fName, city) => {
     }
 }
 
-export { addStudents, addStudent, deleteByID, deleteByName, sortStudentsAlpha, sortStudentsCity, AddStudentInOrder }
+export { addStudents, addStudent, deleteByID, deleteByName, sortStudentsAlpha, sortStudentsCity, addStudentInOrder }

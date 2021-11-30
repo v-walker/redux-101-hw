@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const DisplayStudents = () => {
-  const students = useSelector(state => state.students)
+  const students = useSelector(state => state.students);
   const count = useSelector(state => state.count);
     //display the current students
   return (
