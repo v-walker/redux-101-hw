@@ -11,7 +11,7 @@ const DeleteStudentByID = () => {
   //Delete student by and ID
   return (
     <>
-      Click to Delete Student By ID
+      Click "X" to Delete Student By ID
 
       <ul>
         {students.map((student, index) => {
