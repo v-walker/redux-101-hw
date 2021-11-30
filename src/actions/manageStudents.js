@@ -36,4 +36,30 @@ const deleteByName = (fName) => {
     }
 }
 
-export { addStudents, addStudent, deleteByID, deleteByName }
+const sortStudentsAlpha = () => {
+
+    return {
+        type: "SORT_STUDENTS_ALPHA",
+    }
+}
+
+const sortStudentsCity = () => {
+
+    return {
+        type: "SORT_STUDENTS_CITY",
+    }
+}
+
+const AddStudentInOrder = (id, fName, city) => {
+
+    return {
+        type: "ADD_STUDENT_IN_ORDER",
+        data: {
+            id,
+            fName,
+            city
+        }
+    }
+}
+
+export { addStudents, addStudent, deleteByID, deleteByName, sortStudentsAlpha, sortStudentsCity, AddStudentInOrder }

@@ -7,8 +7,6 @@ const DisplayStudents = () => {
     //display the current students
   return (
     <>
-    Display Students
-
     <h2>Student Count: {count}</h2>
 
     <ul>
