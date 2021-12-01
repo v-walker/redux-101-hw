@@ -10,4 +10,4 @@ const UpdateStudent = () => {
   )
 }
 
-export default UpdateStudent
+export default UpdateStudent;

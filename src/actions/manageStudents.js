@@ -63,4 +63,13 @@ const addStudentInOrder = (id, fName, city) => {
     }
 }
 
-export { addStudents, addStudent, deleteByID, deleteByName, sortStudentsAlpha, sortStudentsCity, addStudentInOrder }
+const searchStudent = (name) => {
+    
+    return {
+        type: "SEARCH_STUDENT",
+        name
+    }
+}
+
+
+export { addStudents, addStudent, deleteByID, deleteByName, sortStudentsAlpha, sortStudentsCity, addStudentInOrder, searchStudent }

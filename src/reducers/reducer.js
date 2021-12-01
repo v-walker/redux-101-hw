@@ -82,6 +82,19 @@ const reducer = (state, action) => {
                 students: state.students.concat(action.data),
                 count: state.students.length + 1
             }
+
+        case "SEARCH_STUDENT":
+            if (state.students.find(student => student.fName === action.name)) {
+                let searchedStudent = state.students.find(student => student.fName === action.name)
+                return {
+                    ...state,
+                    searchResult: searchedStudent
+                }
+            } else {
+                return alert("Student not found. Try again!")
+            }
+        
+            
         default: 
             return state;
     }
